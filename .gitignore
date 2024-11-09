@@ -1,0 +1,20 @@
+# Fichiers de configuration et de sécurité
+.env                   # Fichier d'environnement contenant des informations sensibles
+
+# Environnement virtuel Python
+.venv/                # Répertoire de l'environnement virtuel
+
+# Fichiers de cache Python
+nutritrack/app/__pycache__/           # Répertoire de cache
+
+# Fichiers et répertoires Alembic
+alembic/
+
+# Configurations spécifiques à l'éditeur
+.vscode/               # Configurations de l'éditeur VS Code
+
+# Fichiers de logs
+*.log                  # Fichiers de log
+
+# Tests de base de données générés ou fichiers de débogage
+*.db
