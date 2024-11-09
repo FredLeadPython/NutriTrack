@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, ForeignKey, Float
 from sqlalchemy.orm import relationship
-from nutritrack.app.config import Base
+from app.config import Base
 
 class DailyGoal(Base):
     __tablename__ = "daily_goals"

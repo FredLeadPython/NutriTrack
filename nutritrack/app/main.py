@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from nutritrack.app.routers import user_routes, meal_routes, food_routes, goal_routes
+from app.routers import user_routes, meal_routes, food_routes, goal_routes
 
 app = FastAPI()
 

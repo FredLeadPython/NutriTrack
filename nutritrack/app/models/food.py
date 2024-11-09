@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.orm import relationship
-from nutritrack.app.config import Base
-from nutritrack.app.models.meal import meal_food  # Importez la table de liaison
+from app.config import Base
+from app.models.meal import meal_food  # Importez la table de liaison
 
 class Food(Base):
     __tablename__ = "food"

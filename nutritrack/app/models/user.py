@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-from nutritrack.app.config import Base
+from app.config import Base
 
 class User(Base):
     __tablename__ = "users"

@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, ForeignKey, Date, Float, Table, ForeignKey
 from sqlalchemy.orm import relationship
-from nutritrack.app.config import Base
+from app.config import Base
 
 
 meal_food = Table(

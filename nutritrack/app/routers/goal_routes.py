@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
-from nutritrack.app.config import get_db
-from nutritrack.app.models.daily_goal import DailyGoal
+from app.config import get_db
+from app.models.daily_goal import DailyGoal
 
 router = APIRouter()
 
