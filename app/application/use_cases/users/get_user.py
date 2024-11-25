@@ -1,6 +1,6 @@
-from domain.repositories.user_repository import UserRepository
+from domain.repositories.repository import Repository
 from schemas.user_schemas import UserResult
 
 
-def get_user(repository: UserRepository, user_id: str) -> UserResult:
-    return repository.get_user_by_id(user_id=user_id)
+def get_user(repository: Repository, user_id: str) -> UserResult:
+    return repository.get_by_id(id=user_id)

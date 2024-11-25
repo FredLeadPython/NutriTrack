@@ -2,12 +2,12 @@ import uuid
 from typing import List, Optional
 
 from domain.entities.meal import Meal
-from domain.repositories.meal_repository import MealRepository
+from domain.repositories.repository import Repository
 from infrastructure.database.models.meal_model import MealModel
 from sqlalchemy.orm import Session
 
 
-class MealRepositoryImpl(MealRepository):
+class MealRepositoryImpl(Repository):
     def __init__(self, db_session: Session):
         """
         Initialise le repository avec une session de base de données.
@@ -15,7 +15,7 @@ class MealRepositoryImpl(MealRepository):
         """
         self.db_session = db_session
 
-    def get_meal_by_id(self, meal_id: str) -> Optional[MealModel]:
+    def get_by_id(self, meal_id: str) -> Optional[MealModel]:
         """
         Récupère un repas par son ID.
         :param meal_id: L'identifiant du repas.
@@ -33,14 +33,14 @@ class MealRepositoryImpl(MealRepository):
             )
         return None
 
-    def create_meal(self, meal: Meal) -> MealModel:
+    def create(self, meal: Meal) -> MealModel:
         meal_model = MealModel(id=str(uuid.uuid4()), **meal.__dict__)
         self.db_session.add(meal_model)
         self.db_session.commit()
         self.db_session.refresh(meal_model)
         return meal_model
 
-    def list_meals(self) -> List[MealModel]:
+    def get_all(self) -> List[MealModel]:
         """
         Récupère la liste de tous les repas.
         :return: Une liste d'instances de Meal.
