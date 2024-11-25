@@ -1,7 +1,6 @@
 from typing import List, Optional
 from uuid import uuid4
 
-from domain.entities.user import User
 from domain.repositories.user_repository import UserRepository
 from infrastructure.database.models.user_model import UserModel
 from schemas.user_schemas import UserCreate, UserResult
@@ -26,9 +25,7 @@ class UserRepositoryImpl(UserRepository):
             self.db_session.query(UserModel).filter(UserModel.id == user_id).first()
         )
         if user_model:
-            return User(
-                username=user_model.username, email=user_model.email, age=user_model.age
-            )
+            return UserResult(**user_model.__dict__)
         return None
 
     def create_user(self, user: UserCreate) -> UserResult:
