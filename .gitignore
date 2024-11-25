@@ -1,0 +1,61 @@
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.env
+*.venv
+.venv/
+env_nutri/
+venv/
+env.bak/
+venv.bak/
+
+# Logs
+*.log
+*.log.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Environnements virtuels
+.Python
+pip-log.txt
+
+# Configurations locales
+*.env
+.env.*
+
+# Coverage
+htmlcov/
+*.cover
+*.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.lcov
+
+# Build
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# pytest
+.cache/
+.pytest_cache/
+
+# Migrations Django (si applicables)
+migrations/
+
+# Staticfiles (si applicables)
+staticfiles/
+
+# DB
+test.db
